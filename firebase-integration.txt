@@ -1,0 +1,15 @@
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBSmv9XR5Uyl93xx6woaNJoraKmn4elmoM",
+        authDomain: "test-firebase-be78f.firebaseapp.com",
+        projectId: "test-firebase-be78f",
+        storageBucket: "test-firebase-be78f.appspot.com",
+        messagingSenderId: "765147308532",
+        appId: "1:765147308532:web:d0d1c4c95132762c3ad9a1"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>

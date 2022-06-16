@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: d532b935a4d143e479de9442491675b8
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _skinvdv: {fileID: 2800000, guid: 9c1b157528afccc45861ac6a174101c9, type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
