@@ -16,7 +16,7 @@ public class GameMainState : GameState
     {
         if (fromState is GameLoginState state)
         {
-            LoadSceneAsync("Main Scene", state).Forget();
+            LoadSceneAsync("Game Play", state).Forget();
 
             RegisterListener();
         }
