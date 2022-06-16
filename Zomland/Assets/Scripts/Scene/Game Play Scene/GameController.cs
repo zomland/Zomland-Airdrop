@@ -19,7 +19,6 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject zom3;
 
     [Header("Default")]
-    [SerializeField] DefaultZombieConfig defaultZombieConfig;
 
     public UIController uiController; 
 
