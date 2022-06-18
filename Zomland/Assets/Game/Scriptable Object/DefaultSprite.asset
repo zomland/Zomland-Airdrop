@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49223f712541a54292f1355f6de504d, type: 3}
+  m_Name: DefaultSprite
+  m_EditorClassIdentifier: 
+  listSpritesLab:
+  - name: Bottle Icon
+    sprite: {fileID: 21300000, guid: d26c016094d7bbc4994601282245e3a4, type: 3}
+  - name: Zombie Icon
+    sprite: {fileID: 21300000, guid: b2c73e1944dadc7439b89f08fa5061f2, type: 3}
+  listSpriteChest:
+  - name: Apple Icon
+    sprite: {fileID: 21300000, guid: 0530ee4251045554a97082012c9ccd56, type: 3}
+  - name: Meat Icon
+    sprite: {fileID: 21300000, guid: df2acac81e557fd41840c904eb6048ed, type: 3}
+  - name: Chicken Icon
+    sprite: {fileID: 21300000, guid: dd05c7d6d2e99d44199db05aadc28967, type: 3}
+  - name: Energy Icon
+    sprite: {fileID: 21300000, guid: 6308e6319eb73fe41ae594fe49aee616, type: 3}

@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class LabSceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Popup")]
+    public GameObject createZombiePopup;
+    public GameObject activeZombiePopup;
+
+    [Header("Item")]
+    public LabSceneItem labSceneItemPrefab;
+    public GameObject list;
+    public GameObject whereToSpawn;
+
     void Start()
     {
-        
+        SpawnItem();
+    }
+    
+    //Public Methods
+    public void OpenPopup(LabItemType labItemType)
+    {
+        if(labItemType == LabItemType.Bottle)
+        {
+            createZombiePopup.SetActive(true);
+        }
+        else if(labItemType== LabItemType.Zombie)
+        {
+            activeZombiePopup.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    //Private Methods
+    private void SpawnItem()
     {
-        
+        for(int i=0;i< ClientData.Instance.clientUser.slotLabScene ;i++)
+        {
+            var item = Instantiate(labSceneItemPrefab,whereToSpawn.transform.position,Quaternion.identity,list.transform);
+        }
     }
 }

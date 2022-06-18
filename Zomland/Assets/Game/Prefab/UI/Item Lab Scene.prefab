@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 5951224006120907279}
   - component: {fileID: 5951224006120907278}
   - component: {fileID: 3455277837290325003}
+  - component: {fileID: -1726477303783952363}
   m_Layer: 5
   m_Name: Item Lab Scene
   m_TagString: Untagged
@@ -196,3 +197,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1726477303783952363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951224006120907276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcb35c75d2658b4e9736d19414a31aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labItemType: 0
+  button: {fileID: 3455277837290325003}
