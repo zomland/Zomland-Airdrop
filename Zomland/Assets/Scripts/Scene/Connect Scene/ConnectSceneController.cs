@@ -16,17 +16,11 @@ public class ConnectSceneController : MonoBehaviour
             connectButton.gameObject.SetActive(true);
             addressText.text ="";
         }
-        else
+        else if(ClientData.Instance.clientUser.address != "")
         {
             connectButton.gameObject.SetActive(false);
             DisplayAddress();
         }
-        connectButton.onClick.AddListener(Connect);
-    }
-
-    void OnDestroy()
-    {
-        connectButton.onClick.RemoveListener(Connect);
     }
 
     public void Connected(string address)
@@ -39,10 +33,5 @@ public class ConnectSceneController : MonoBehaviour
     public void DisplayAddress()
     {
         addressText.text =  ClientData.Instance.clientUser.address.ToString();
-    }
-
-    private void Connect()
-    {
-        GetComponent<WebLogin>().OnLogin();
     }
 }
