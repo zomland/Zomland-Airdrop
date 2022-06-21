@@ -26,7 +26,7 @@ public class Import : MonoBehaviour
         string gasPrice = "";
         try
         {
-            string response = await Web3GL.SendContract(method, abi, contract, args, value, gasLimit, gasPrice);
+           // string response = await Web3GL.SendContract(method, abi, contract, args, value, gasLimit, gasPrice);
         }
         catch (Exception e)
         {

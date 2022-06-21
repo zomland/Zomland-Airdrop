@@ -13,6 +13,7 @@ public class GameplaySceneController : MonoBehaviour
     public Movement zombie;
 
 
+    public bool isPlaying =  false;
     void Start()
     {
         startNowButton.onClick.AddListener(StartNow);
@@ -26,8 +27,13 @@ public class GameplaySceneController : MonoBehaviour
 
     private void StartNow()
     {
+        isPlaying= true;
         startNowButton.gameObject.SetActive(false);
         imageBottle.SetActive(false);
         zombie.transform.GetChild(0).gameObject.SetActive(true);
+        
+        FindObjectOfType<AnimationController>().GetAnimator();
+        GetComponent<ItemSpawner>().ChangeStatusSpawn(true);
+        
     }
 }

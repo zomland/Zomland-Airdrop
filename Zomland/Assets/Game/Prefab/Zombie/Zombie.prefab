@@ -1821,9 +1821,10 @@ GameObject:
   - component: {fileID: 3801335122387231019}
   - component: {fileID: 919132149238931368}
   - component: {fileID: 919132149238931369}
+  - component: {fileID: 919132149238931367}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1875,6 +1876,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0787375, y: 2.8232427, z: 1}
   m_Center: {x: 0.009587526, y: 1.4157102, z: 0}
+--- !u!95 &919132149238931367
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4578716663258233745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9377a20fec2e9eb49bab7b44bda23673, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4753319602681688581
 GameObject:
   m_ObjectHideFlags: 0

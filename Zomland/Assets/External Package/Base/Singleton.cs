@@ -35,6 +35,7 @@ namespace Base
                     {
                         // Search for existing instance.
                         m_Instance = (T)FindObjectOfType(typeof(T));
+                        DontDestroyOnLoad(m_Instance);
 
                         // Create new instance if one doesn't already exist.
                         if (m_Instance == null)

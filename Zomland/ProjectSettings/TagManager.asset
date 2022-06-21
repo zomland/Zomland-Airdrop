@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coin Spawner
-  - Coin
-  - Wall
+  - Ground
   layers:
   - Default
   - TransparentFX

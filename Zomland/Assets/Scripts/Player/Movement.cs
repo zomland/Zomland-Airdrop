@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+        if(FindObjectOfType<GameplaySceneController>().isPlaying == false) return;
         Move();
     }
 

@@ -11,6 +11,7 @@ public class ClientUser
     public string address;
     public int slotLabScene;
     public int slotChestScene;
+    public int amountCoin;
 
     public List<LabItem> listItemLab ;
     public List<ChestItem> listItemChest ;
@@ -22,6 +23,7 @@ public class ClientUser
         address = String.Empty;
         slotChestScene= 12;
         slotLabScene = 9;
+        amountCoin = 0;
 
         listItemLab =  new List<LabItem>();
         listItemChest = new List<ChestItem>();

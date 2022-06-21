@@ -6,7 +6,7 @@ public class AnimationController : MonoBehaviour
 {
     Animator animator;
 
-    void Awake()
+    public void GetAnimator()
     {
         animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
     }
