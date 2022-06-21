@@ -6,7 +6,7 @@ public class ClientData : Singleton<ClientData>
     public ClientUser clientUser;
     public ClientAsset clientAsset;
 
-    private void Awake()
+    private void Start()
     {
         clientUser = new ClientUser();
         clientAsset = new ClientAsset();

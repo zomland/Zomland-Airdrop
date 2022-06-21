@@ -649,9 +649,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1029454583}
-        m_TargetAssemblyTypeName: ConnectSceneUIController, Assembly-CSharp
-        m_MethodName: hi
+      - m_Target: {fileID: 1029454584}
+        m_TargetAssemblyTypeName: WebLogin, Assembly-CSharp
+        m_MethodName: OnLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

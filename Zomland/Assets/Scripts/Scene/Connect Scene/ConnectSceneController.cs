@@ -28,6 +28,7 @@ public class ConnectSceneController : MonoBehaviour
     {
         ClientData.Instance.clientUser.address = address;
         connectButton.gameObject.SetActive(false);
+        addressText.gameObject.SetActive(true);
         DisplayAddress();
     }
 
