@@ -6,5 +6,8 @@ using TMPro;
 
 public class ConnectSceneUIController : MonoBehaviour
 {
-    
+    public void hi()
+    {
+        Debug.Log("1");
+    }
 }

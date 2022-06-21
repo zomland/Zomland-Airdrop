@@ -13,12 +13,13 @@ public class ConnectSceneController : MonoBehaviour
     {
         if(ClientData.Instance.clientUser.address =="")
         {
+            addressText.gameObject.SetActive(false);
             connectButton.gameObject.SetActive(true);
-            addressText.text ="";
         }
         else if(ClientData.Instance.clientUser.address != "")
         {
             connectButton.gameObject.SetActive(false);
+            addressText.gameObject.SetActive(true);
             DisplayAddress();
         }
     }
