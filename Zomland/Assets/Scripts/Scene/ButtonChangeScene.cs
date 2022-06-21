@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public enum Scenes
 {
-    [StringValue("Manager Scene")] ManagerScene = 0 ,
-    [StringValue("Login Scene")] LoginScene  ,
-    [StringValue("Loading Scene")] LoadingScene ,
-    [StringValue("GamePlay Scene")] GamePlayScene  ,
-    [StringValue("Chest Scene")] ChestScene  ,
-    [StringValue("Lab Scene")] LabScene 
+    ManagerScene = 0 ,
+     LoginScene  ,
+     LoadingScene ,
+    GamePlayScene  ,
+    ChestScene  ,
+    LabScene ,
+    ConnectScene,
 }
 public class ButtonChangeScene : MonoBehaviour
 {

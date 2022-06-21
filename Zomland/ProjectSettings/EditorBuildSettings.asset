@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LabScene.unity
     guid: 68ca1eafcf331d644997fdfc7aca1d69
+  - enabled: 1
+    path: Assets/Scenes/ChestScene.unity
+    guid: fc32c0e65c22f764fac4c323ef4bb654
   m_configObjects: {}

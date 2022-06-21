@@ -9,7 +9,6 @@ public class DisplayAmountCoin : MonoBehaviour
 
     void Update()
     {
-        if(!ClientData.Instance) return;
         amountCoinText.text = ClientData.Instance.clientUser.amountCoin.ToString();
     }
 }
