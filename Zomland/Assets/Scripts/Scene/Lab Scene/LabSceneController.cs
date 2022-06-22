@@ -38,5 +38,7 @@ public class LabSceneController : MonoBehaviour
         {
             var item = Instantiate(labSceneItemPrefab,whereToSpawn.transform.position,Quaternion.identity,list.transform);
         }
+
+        //for(int i = 0 ;i<)
     }
 }

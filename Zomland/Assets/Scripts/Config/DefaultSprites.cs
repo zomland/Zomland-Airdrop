@@ -6,7 +6,7 @@ using UnityEngine;
 public class DefaultSprites : ScriptableObject
 {
     public List<Sprites> listSpritesLab = new List<Sprites>();
-     public List<Sprites> listSpriteChest = new List<Sprites>();
+    public List<Sprites> listSpriteChest = new List<Sprites>();
 }
 
 

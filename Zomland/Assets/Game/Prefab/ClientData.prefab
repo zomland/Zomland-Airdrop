@@ -43,11 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 792ddfe1b322ffb45af0915419dd61ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSprites: {fileID: 11400000, guid: 0c3a12e83bb54334fb85372184143c21, type: 2}
   clientUser:
     uid: 
     isFirstTime: 0
     address: 
     slotLabScene: 9
     slotChestScene: 12
+    amountCoin: 0
+    listItemLab: []
+    listItemChest: []
   clientAsset:
     Sprites: []
