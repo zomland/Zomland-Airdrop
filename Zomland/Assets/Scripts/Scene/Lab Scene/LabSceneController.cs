@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LabSceneController : MonoBehaviour
 {
@@ -39,6 +40,17 @@ public class LabSceneController : MonoBehaviour
             var item = Instantiate(labSceneItemPrefab,whereToSpawn.transform.position,Quaternion.identity,list.transform);
         }
 
-        //for(int i = 0 ;i<)
+        int index = 0;
+        foreach(var child in ClientData.Instance.clientUser.listItemLab)
+        {
+            int amount  = child.amount;
+            for(int j  =0;j< amount ;j++)
+            {
+                var item =  list.transform.GetChild(index);
+                item.transform.GetChild(0).GetComponent<Image>().sprite  = ClientData.Instance.GetSpriteLab(child.name);
+                item.GetComponent<LabSceneItem>().SetType(child.name);
+                index ++;
+            }
+        }
     }
 }

@@ -11,8 +11,9 @@ public enum LabItemType
 
 public class LabSceneItem : MonoBehaviour
 {
-    public LabItemType labItemType;
     public Button button;
+
+    LabItemType labItemType;
 
     void OnEnable ()
     {
@@ -27,5 +28,17 @@ public class LabSceneItem : MonoBehaviour
     private void Choose()
     {
         FindObjectOfType<LabSceneController>().OpenPopup(labItemType);
+    }
+
+    public void SetType(string name)
+    {
+        if(name == "Bottle Icon")
+        {
+            labItemType = LabItemType.Bottle;
+        }
+        else if(name =="Zombie Icon")
+        {
+            labItemType = LabItemType.Zombie;
+        }
     }
 }
