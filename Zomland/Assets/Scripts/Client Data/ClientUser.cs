@@ -31,6 +31,7 @@ public class ClientUser
 
         //Fake data
         TestLabItem();
+        TestChestItem();
     }
 
     public ClientUser()
@@ -80,6 +81,13 @@ public class ClientUser
             {
                 child.amount +=3;
             }
+        }
+    }
+    void TestChestItem()
+    {
+        foreach(var child in listItemChest)
+        {
+            child.amount   += 2 ;
         }
     }
 }

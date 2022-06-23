@@ -30,15 +30,16 @@ public class LabSceneItem : MonoBehaviour
         FindObjectOfType<LabSceneController>().OpenPopup(labItemType);
     }
 
-    public void SetType(string name)
+    public void SetType( string name)
     {
-        if(name == "Bottle Icon")
+        switch(name)
         {
-            labItemType = LabItemType.Bottle;
-        }
-        else if(name =="Zombie Icon")
-        {
-            labItemType = LabItemType.Zombie;
+            case "Bottle Icon" :
+                labItemType = LabItemType.Bottle;
+                break;
+            case "Zombie Icon" :
+                labItemType = LabItemType.Zombie;
+                break;
         }
     }
 }

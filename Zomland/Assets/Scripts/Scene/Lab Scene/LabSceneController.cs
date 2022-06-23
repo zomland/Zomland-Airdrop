@@ -43,8 +43,7 @@ public class LabSceneController : MonoBehaviour
         int index = 0;
         foreach(var child in ClientData.Instance.clientUser.listItemLab)
         {
-            int amount  = child.amount;
-            for(int j  =0;j< amount ;j++)
+            for(int j  =0;j< child.amount ;j++)
             {
                 var item =  list.transform.GetChild(index);
                 item.transform.GetChild(0).GetComponent<Image>().sprite  = ClientData.Instance.GetSpriteLab(child.name);
