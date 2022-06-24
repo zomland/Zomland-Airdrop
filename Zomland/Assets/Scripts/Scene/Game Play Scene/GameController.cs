@@ -18,9 +18,6 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject zom2;
     [SerializeField] GameObject zom3;
 
-    [Header("Default")]
-
-    public UIController uiController; 
 
     private void Start()
     {
@@ -45,8 +42,7 @@ public class GameController : MonoBehaviour
     public void SetDataFromFirebaseToClient(string address)
     {
         ClientData.Instance.clientUser.address = address;
-        uiController.DisplayAddress();
-        UpdateJson();
+            UpdateJson();
     }
 
     public void UpdateJson()

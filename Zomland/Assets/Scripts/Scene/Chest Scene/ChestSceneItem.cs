@@ -35,16 +35,16 @@ public class ChestSceneItem : MonoBehaviour
     {
         switch(name)
         {
-            case "Apple Icon" :
+            case "Apple" :
                 type = ChestItemType.Apple;
                 break;
-            case "Meat Icon" :
+            case "Meat" :
                 type = ChestItemType.Meat;
                 break;
-            case "Chicken Icon" :
+            case "Chicken" :
                 type = ChestItemType.Chicken;
                 break;
-            case "Energy Icon" :
+            case "Energy" :
                 type = ChestItemType.Energy;
                 break;
         }

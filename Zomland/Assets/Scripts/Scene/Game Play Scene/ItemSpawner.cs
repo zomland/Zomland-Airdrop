@@ -13,8 +13,8 @@ public class ItemSpawner : MonoBehaviour
     public GameObject foodSpawner;
 
     [Header("Item")]
-    public ItemController coin;
-    public ItemController food;
+    public CoinController coin;
+    public List<FoodController> listFood ;
 
     bool canSpawn;
     float countTime;
@@ -50,7 +50,7 @@ public class ItemSpawner : MonoBehaviour
         if(!canSpawn) return;
         if(countTime >= timeSpawnFood && spawnFood == true)
         {
-            Instantiate(food,foodSpawner.transform.GetChild(indexFood).position,Quaternion.identity);
+            Instantiate(listFood[Random.Range(0,3)],foodSpawner.transform.GetChild(indexFood));
             indexFood ++;
             if(indexFood == foodSpawner.transform.childCount)
             {
@@ -61,7 +61,7 @@ public class ItemSpawner : MonoBehaviour
         }
         else if(countTime  >= timeSpawnCoin && spawnCoin == true)
         {
-            Instantiate(coin,coinSpawner.transform.GetChild(indexCoin).position,Quaternion.identity);
+            Instantiate(coin,coinSpawner.transform.GetChild(indexCoin));
             indexCoin ++;
             if(indexCoin == coinSpawner.transform.childCount)
             {

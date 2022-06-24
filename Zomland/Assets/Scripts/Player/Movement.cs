@@ -21,17 +21,16 @@ public class Movement : MonoBehaviour
     {
         if(speed <= 0 ) return;
         float getX =  Input.GetAxisRaw("Horizontal");
-        float getZ =  Input.GetAxisRaw("Vertical");
         
-        if(getX != 0 || getZ != 0)
+        if(getX != 0 )
         {
-            transform.forward = new Vector3(getX, 0 ,getZ);
-            transform.Translate(transform.forward * speed *Time.deltaTime,Space.World);
-            animationController.ChangeAnimation("Run");
+            transform.forward = new Vector3(-getX, 0 ,0);
+             GetComponent<AnimationController>().ChangeAnimation("Walk");
+            transform.Translate(transform.forward * speed *Time.deltaTime,Space.World);    
         }
         else
         {
-            animationController.ChangeAnimation("Idle");
+             GetComponent<AnimationController>().ChangeAnimation("Idle");
         }
     }
 }

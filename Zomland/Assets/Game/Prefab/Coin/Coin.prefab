@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9096966357890356102}
   - component: {fileID: 9096966357890356103}
   - component: {fileID: 9096966357890356096}
+  - component: {fileID: -5120482883970893890}
   - component: {fileID: 9096966357890356100}
-  - component: {fileID: 1833045764127163807}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -97,6 +97,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5120482883970893890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096966357890356097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0b24e00a3b8e74dab3bb4dc8db50c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3
 --- !u!54 &9096966357890356100
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -113,17 +126,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1833045764127163807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9096966357890356097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf36cc96838b76b418b97a17d2e25565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typeItem: 0
-  time: 3

@@ -69,15 +69,28 @@ public class ClientUser
         }
     }
 
+    public void IncreaseChestItem(string type)
+    {
+        foreach(var child in listItemChest)
+        {
+            if(child.name == type) 
+            {
+                child.amount += 1;
+                return;
+            }
+        }
+        return ;
+    }
+
     void TestLabItem()
     {
         foreach(var child in listItemLab)
         {
-            if(child.name == "Bottle Icon")
+            if(child.name == "Bottle")
             {
                 child.amount += 2;
             }
-            else if(child.name =="Zombie Icon")
+            else if(child.name =="Zombie")
             {
                 child.amount +=3;
             }

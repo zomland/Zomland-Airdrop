@@ -12,8 +12,8 @@ public class GameplaySceneController : MonoBehaviour
     [Header("Zombie")]
     public Movement zombie;
 
-
     public bool isPlaying =  false;
+    
     void Start()
     {
         startNowButton.onClick.AddListener(StartNow);

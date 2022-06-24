@@ -11,13 +11,13 @@ public class GamePlaySceneUI : MonoBehaviour
     public Animator chestAnimator;
 
 
-    public void IncreaseCoinAnimation(TypeItem typeItem)
+    public void ItemAnimation(string type)
     {
-        if(typeItem == TypeItem.coin)
+        if(type =="Coin")
         {
             coinAmountUIAnimator.SetTrigger("shake");
         }
-        else if(typeItem == TypeItem.food)
+        else if(type =="Food")
         {
             chestAnimator.SetTrigger("shake");
         }

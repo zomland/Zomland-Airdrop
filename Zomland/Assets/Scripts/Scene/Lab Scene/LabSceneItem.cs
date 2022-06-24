@@ -34,10 +34,10 @@ public class LabSceneItem : MonoBehaviour
     {
         switch(name)
         {
-            case "Bottle Icon" :
+            case "Bottle" :
                 labItemType = LabItemType.Bottle;
                 break;
-            case "Zombie Icon" :
+            case "Zombie" :
                 labItemType = LabItemType.Zombie;
                 break;
         }
