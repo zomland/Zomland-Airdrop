@@ -31,11 +31,11 @@ public class GamePlaySceneUI : MonoBehaviour
     {
         if(type =="Coin")
         {
-            coinAmountUIAnimator.SetTrigger("Shake");
+            coinAmountUIAnimator.SetTrigger("shake");
         }
         else if(type =="Food")
         {
-            chestAnimator.SetTrigger("Shake");
+            chestAnimator.SetTrigger("shake");
         }
         
     }

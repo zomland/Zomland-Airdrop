@@ -20,6 +20,7 @@ public class CoinController : MonoBehaviour
             {
                 FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
             }
+            FindObjectOfType<GamePlaySceneUI>().ItemAnimation("Coin");
             Destroy(gameObject);
             FindObjectOfType<Movement>().ChangeCurrentSpeed(0);
         }

@@ -38,6 +38,7 @@ public class FoodController : MonoBehaviour
             {
                 FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
             }
+            FindObjectOfType<GamePlaySceneUI>().ItemAnimation("Food");
             Destroy(gameObject);
             FindObjectOfType<Movement>().ChangeCurrentSpeed(0);
         }

@@ -476,8 +476,8 @@ GameObject:
   m_Component:
   - component: {fileID: 445110518}
   - component: {fileID: 445110519}
-  - component: {fileID: 445110520}
   - component: {fileID: 445110521}
+  - component: {fileID: 445110520}
   m_Layer: 0
   m_Name: GamePlay Controller
   m_TagString: Untagged
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 445110517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa37b85f14bc3a4bb818d6dc8db3df5, type: 3}
+  m_Script: {fileID: 11500000, guid: ba307a624916f1844a6a9deed9a8e316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   coinAmountUIAnimator: {fileID: 1782012201}
@@ -730,7 +730,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585962921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.55, z: 3.94}
+  m_LocalPosition: {x: -0, y: 13.55, z: 3.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1245881513}
@@ -2587,8 +2587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00048828125}
-  m_SizeDelta: {x: 1744.2, y: 3099.6}
+  m_AnchoredPosition: {x: -22.252014, y: 0.00048828125}
+  m_SizeDelta: {x: 1860.6, y: 3099.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031508800
 MonoBehaviour:
@@ -2817,7 +2817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109601923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.55, z: -4.51}
+  m_LocalPosition: {x: 0, y: 13.55, z: -3.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1344565917}
