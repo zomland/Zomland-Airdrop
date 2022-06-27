@@ -13,11 +13,15 @@ public class CoinController : MonoBehaviour
         {
             Destroy(gameObject,time);
         }
-        else if (collision.gameObject.tag =="Player")
+        else if (collision.gameObject.tag =="Player" )
         {  
             ClientData.Instance.clientUser.amountCoin += 10;
-            FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
+            if(FindObjectOfType<Movement>().isAnimationPick == false)
+            {
+                FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
+            }
             Destroy(gameObject);
+            FindObjectOfType<Movement>().ChangeCurrentSpeed(0);
         }
      }
 }

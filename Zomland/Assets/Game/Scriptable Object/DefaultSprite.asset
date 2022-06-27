@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listSpritesLab:
   - name: Bottle
-    sprite: {fileID: 21300000, guid: d26c016094d7bbc4994601282245e3a4, type: 3}
+    sprite: {fileID: 21300000, guid: fa7490f746f7fed409de7f5c2f822f83, type: 3}
   - name: Zombie
     sprite: {fileID: 21300000, guid: b2c73e1944dadc7439b89f08fa5061f2, type: 3}
   listSpriteChest:

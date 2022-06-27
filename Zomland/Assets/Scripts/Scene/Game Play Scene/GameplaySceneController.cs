@@ -8,9 +8,12 @@ public class GameplaySceneController : MonoBehaviour
     [Header("UI")]
     public Button startNowButton;
     public GameObject imageBottle;
+    public Sprite imageHavingZom;
+    public GameObject background;
 
     [Header("Zombie")]
     public Movement zombie;
+    public GameObject ground;
 
     public bool isPlaying =  false;
     
@@ -30,6 +33,8 @@ public class GameplaySceneController : MonoBehaviour
         isPlaying= true;
         startNowButton.gameObject.SetActive(false);
         imageBottle.SetActive(false);
+        background.GetComponent<Image>().sprite =  imageHavingZom;
+        ground.SetActive(true);
         zombie.transform.GetChild(0).gameObject.SetActive(true);
         
         FindObjectOfType<AnimationController>().GetAnimator();

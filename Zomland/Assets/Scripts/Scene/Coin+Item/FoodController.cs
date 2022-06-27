@@ -34,8 +34,12 @@ public class FoodController : MonoBehaviour
         else if (collision.gameObject.tag =="Player")
         {  
             IncreaseChestItem();
-            FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
+            if(FindObjectOfType<Movement>().isAnimationPick == false)
+            {
+                FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
+            }
             Destroy(gameObject);
+            FindObjectOfType<Movement>().ChangeCurrentSpeed(0);
         }
      }
 }
