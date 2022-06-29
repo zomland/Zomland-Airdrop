@@ -25,36 +25,39 @@ public class Movement : MonoBehaviour
     private void Move()
     {
         if(speed <= 0 ) return;
+
         float getX =  Input.GetAxisRaw("Horizontal");
         
-        if(getX != 0 && currentSpeed != 0)
+        if(getX != 0  && isAnimationPick == false)
         {
             transform.forward = new Vector3(-getX, 0 ,0);
             animationController.ChangeAnimation("Walk");
             transform.Translate(transform.forward * currentSpeed *Time.deltaTime,Space.World);    
         }
-        else if(getX == 0  && currentSpeed != 0)
+        else if(getX == 0 && isAnimationPick == false)
         {
             transform.forward = new Vector3(0, 0 ,1);
             animationController.ChangeAnimation("Idle");
         }
     }
 
-    public void ChangeCurrentSpeed(float _speed)
+    public void ChangeDirection(ChestItemType typeFood)
     {
-        currentSpeed =  _speed;
-        if(_speed == 0)
+        if(typeFood == ChestItemType.Apple || typeFood ==ChestItemType.Meat)
         {
-            isAnimationPick = true;
+            transform.forward = new Vector3(0,0,1);
         }
-        StartCoroutine(InitSpeed());
     }
 
-    IEnumerator InitSpeed()
+    public void ReturnAnimation()
     {
-        yield return new WaitForSeconds(2f);
-        currentSpeed = speed;
+        StartCoroutine(ReturnIdle());
+    }
+
+    IEnumerator ReturnIdle()
+    {
+        yield return new WaitForSeconds(1.8f);
         isAnimationPick = false;
-        animationController.ChangeAnimation("Idle");
+        //animationController.ChangeAnimation("Idle");
     }
 }

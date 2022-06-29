@@ -29,18 +29,19 @@ public class FoodController : MonoBehaviour
      {
         if(collision.gameObject.tag =="Ground")
         {
+            GetComponent<Rigidbody>().isKinematic = true;
             Destroy(gameObject,time);
         }
         else if (collision.gameObject.tag =="Player")
-        {  
+        { 
             IncreaseChestItem();
-            if(FindObjectOfType<Movement>().isAnimationPick == false)
-            {
-                FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
-            }
+
+            var zom =  FindObjectOfType<Movement>();
+
+            zom.ChangeDirection(typeFood);
             FindObjectOfType<GamePlaySceneUI>().ItemAnimation("Food");
             Destroy(gameObject);
-            FindObjectOfType<Movement>().ChangeCurrentSpeed(0);
+            FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
         }
      }
 }

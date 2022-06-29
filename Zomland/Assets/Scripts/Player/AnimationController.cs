@@ -14,5 +14,11 @@ public class AnimationController : MonoBehaviour
     public void ChangeAnimation(string anim)
     {
         animator.SetTrigger(anim);
+        if(anim =="Pick")
+        {
+             GetComponent<Movement>().isAnimationPick  = true;
+             GetComponent<Movement>().ReturnAnimation();
+        }
+        
     }
 }

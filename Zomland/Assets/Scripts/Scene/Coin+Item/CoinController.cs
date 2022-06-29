@@ -16,13 +16,10 @@ public class CoinController : MonoBehaviour
         else if (collision.gameObject.tag =="Player" )
         {  
             ClientData.Instance.clientUser.amountCoin += 10;
-            if(FindObjectOfType<Movement>().isAnimationPick == false)
-            {
-                FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
-            }
+
             FindObjectOfType<GamePlaySceneUI>().ItemAnimation("Coin");
             Destroy(gameObject);
-            FindObjectOfType<Movement>().ChangeCurrentSpeed(0);
+            FindObjectOfType<AnimationController>().ChangeAnimation("Pick");
         }
      }
 }

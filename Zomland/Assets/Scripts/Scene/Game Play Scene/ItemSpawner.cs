@@ -50,7 +50,16 @@ public class ItemSpawner : MonoBehaviour
         if(!canSpawn) return;
         if(countTime >= timeSpawnFood && spawnFood == true)
         {
-            Instantiate(listFood[Random.Range(0,3)],foodSpawner.transform.GetChild(indexFood));
+            int rnd;
+            if(indexFood == 2|| indexFood == 4)
+            {
+                rnd = Random.Range(0,2);
+            }
+            else
+            {
+                rnd = Random.Range(2,4);
+            }
+            Instantiate(listFood[rnd],foodSpawner.transform.GetChild(indexFood));
             indexFood ++;
             if(indexFood == foodSpawner.transform.childCount)
             {
