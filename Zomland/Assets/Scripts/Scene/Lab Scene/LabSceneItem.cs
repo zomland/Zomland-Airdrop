@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public enum LabItemType 
 {
+    FirstBottle,
     Bottle,
     Zombie
 }
@@ -12,8 +13,8 @@ public enum LabItemType
 public class LabSceneItem : MonoBehaviour
 {
     public Button button;
-
-    LabItemType labItemType;
+    public int orderZombie;     //if bottle -> -1 , if zombie -> order by listZombie in ClientUser
+    public LabItemType labItemType;
 
     void OnEnable ()
     {
@@ -30,15 +31,21 @@ public class LabSceneItem : MonoBehaviour
         FindObjectOfType<LabSceneController>().OpenPopup(labItemType);
     }
 
-    public void SetType( string name)
+    public void SetType( string name , int index)
     {
         switch(name)
         {
+            case "First Bottle" : 
+                labItemType = LabItemType.FirstBottle;
+                orderZombie = -1;
+                break;
             case "Bottle" :
                 labItemType = LabItemType.Bottle;
+                orderZombie = -1;
                 break;
             case "Zombie" :
                 labItemType = LabItemType.Zombie;
+                orderZombie = index;
                 break;
         }
     }

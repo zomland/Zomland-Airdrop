@@ -10,6 +10,7 @@ public class GameplaySceneController : MonoBehaviour
     public GameObject imageBottle;
     public Sprite imageHavingZom;
     public GameObject background;
+    public GameObject dontHaveZombiePopup;
 
     [Header("Zombie")]
     public Movement zombie;
@@ -30,6 +31,10 @@ public class GameplaySceneController : MonoBehaviour
 
     private void StartNow()
     {
+        if(ClientData.Instance.indexCurrentZombie == -1)
+        {
+            dontHaveZombiePopup.SetActive(true);
+        }
         isPlaying= true;
         startNowButton.gameObject.SetActive(false);
         imageBottle.SetActive(false);

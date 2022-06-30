@@ -12,16 +12,16 @@ public class FoodController : MonoBehaviour
         switch(typeFood)
         {
             case ChestItemType.Apple:
-                ClientData.Instance.clientUser.IncreaseChestItem("Apple");
+                ClientData.Instance.clientUser.ChangeAmountChestItem("Apple",1);
                 break;
             case ChestItemType.Meat:
-                ClientData.Instance.clientUser.IncreaseChestItem("Meat");
+                ClientData.Instance.clientUser.ChangeAmountChestItem("Meat",1);
                 break;
             case ChestItemType.Chicken:
-                ClientData.Instance.clientUser.IncreaseChestItem("Chicken");
+                ClientData.Instance.clientUser.ChangeAmountChestItem("Chicken",1);
                 break;
             case ChestItemType.Energy:
-                ClientData.Instance.clientUser.IncreaseChestItem("Energy");
+                ClientData.Instance.clientUser.ChangeAmountChestItem("Energy",1);
                 break;
         }
     }

@@ -13,8 +13,12 @@ public class ClientUser
     public int slotChestScene;
     public int amountCoin;
 
+    //Item
     public List<LabItem> listItemLab ;
     public List<ChestItem> listItemChest ;
+
+    //Zombie
+    public List<ClientZombie> clientZombies;
 
     public ClientUser(DefaultSprites defaultSprites)
     {
@@ -28,6 +32,8 @@ public class ClientUser
         listItemLab =  new List<LabItem>();
         listItemChest = new List<ChestItem>();
         InitItemLabAndChest(defaultSprites);
+
+        clientZombies = new List<ClientZombie>();
 
         //Fake data
         TestLabItem();
@@ -47,18 +53,20 @@ public class ClientUser
         listItemChest = new List<ChestItem>();
     }
 
-    public ClientUser(FirebaseUser firebaseUser)
-    {
-        uid = firebaseUser.uid;
-        isFirstTime = false;
-        address = String.Empty;
-    }
-
     private void InitItemLabAndChest(DefaultSprites defaultSprites)
     {
         foreach(var child in defaultSprites.listSpritesLab)
         {
-            var tmp =  new LabItem(child.name , 0);
+            LabItem tmp ; 
+            if(child.name == "First Bottle")
+            {
+                tmp = new LabItem(child.name,1);
+            }
+            else
+            {
+                tmp =  new LabItem(child.name , 0);
+            }
+            
             listItemLab.Add(tmp);
         }
 
@@ -69,18 +77,56 @@ public class ClientUser
         }
     }
 
-    public void IncreaseChestItem(string type)
+    public void ChangeAmountLabItem(string typeLab ,  int signal)
     {
-        foreach(var child in listItemChest)
+        foreach(var child in listItemLab)
         {
-            if(child.name == type) 
+            if(child.name == typeLab) 
             {
-                child.amount += 1;
+                if(signal == 0)
+                {
+                     child.amount -= 1;
+                }
+                else if(signal == 1)
+                {
+                     child.amount += 1;
+                }
                 return;
             }
         }
         return ;
     }
+
+     public void ChangeAmountChestItem(string typechest ,  int signal)
+    {
+        foreach(var child in listItemChest)
+        {
+            if(child.name == typechest) 
+            {
+                if(signal == 0)
+                {
+                     child.amount -= 1;
+                }
+                else if(signal ==1)
+                {
+                     child.amount += 1;
+                }
+                return;
+            }
+        }
+        return ;
+    }
+
+    public void CreateZombie()
+    {
+        ClientZombie newZombie =  new ClientZombie();
+        clientZombies.Add(newZombie);
+
+        ChangeAmountLabItem("Zombie",1);
+        ChangeAmountLabItem("Bottle",0);
+
+    }
+
 
     void TestLabItem()
     {
@@ -88,11 +134,7 @@ public class ClientUser
         {
             if(child.name == "Bottle")
             {
-                child.amount += 2;
-            }
-            else if(child.name =="Zombie")
-            {
-                child.amount +=3;
+                child.amount += 3;
             }
         }
     }
