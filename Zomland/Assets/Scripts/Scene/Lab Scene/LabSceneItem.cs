@@ -28,7 +28,7 @@ public class LabSceneItem : MonoBehaviour
 
     private void Choose()
     {
-        FindObjectOfType<LabSceneController>().OpenPopup(labItemType);
+        FindObjectOfType<LabSceneUIController>().OpenPopup(labItemType);
     }
 
     public void SetType( string name , int index)

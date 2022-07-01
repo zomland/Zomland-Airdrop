@@ -7,12 +7,10 @@ public class ClientData : Singleton<ClientData>
 {
     public DefaultSprites defaultSprites;
     public ClientUser clientUser;
-    public int indexCurrentZombie;
     public ClientAsset clientAsset;
 
     private void Start()
     {
-        indexCurrentZombie =-1;
         clientUser = new ClientUser(defaultSprites);
         clientAsset = new ClientAsset();
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameplaySceneController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameplaySceneController : MonoBehaviour
     public Sprite imageHavingZom;
     public GameObject background;
     public GameObject dontHaveZombiePopup;
+    public TextMeshProUGUI ID;
 
     [Header("Zombie")]
     public Movement zombie;
@@ -31,19 +33,26 @@ public class GameplaySceneController : MonoBehaviour
 
     private void StartNow()
     {
-        if(ClientData.Instance.indexCurrentZombie == -1)
+        if(ClientGame.Instance.IDCurrentZombie == "")
         {
             dontHaveZombiePopup.SetActive(true);
+            return;
         }
+
         isPlaying= true;
         startNowButton.gameObject.SetActive(false);
         imageBottle.SetActive(false);
+
+        ID.gameObject.SetActive(true);
+        ID.text = ClientGame.Instance.IDCurrentZombie;
+        
         background.GetComponent<Image>().sprite =  imageHavingZom;
         ground.SetActive(true);
-        zombie.transform.GetChild(0).gameObject.SetActive(true);
         
+        var zom  =  Resources.Load<GameObject>("Zombie/Zombie");
+        Instantiate(zom,zombie.transform.position,Quaternion.identity,zombie.transform);
+
         FindObjectOfType<AnimationController>().GetAnimator();
         GetComponent<ItemSpawner>().ChangeStatusSpawn(true);
-        
     }
 }

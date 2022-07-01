@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public class LabSceneController : MonoBehaviour
 {
-    [Header("Popup")]
-    public GameObject createZombiePopup;
-    public GameObject createFreeZombiePopup;
-    public GameObject activeZombiePopup;
-
     [Header("Item")]
     public LabSceneItem labSceneItemPrefab;
     public GameObject list;
@@ -50,34 +45,20 @@ public class LabSceneController : MonoBehaviour
     }
     
     //Public Methods
-    public void OpenPopup(LabItemType labItemType)
-    {
-        if(labItemType == LabItemType.Bottle)
-        {
-            createZombiePopup.SetActive(true);
-        }
-        else if(labItemType == LabItemType.FirstBottle)
-        {
-            createFreeZombiePopup.SetActive(true);
-        }
-        else if(labItemType== LabItemType.Zombie)
-        {
-            activeZombiePopup.SetActive(true);
-        }
-    }
 
     public void OnClickCreateFreeZombie()
     {
-
+        ClientData.Instance.clientUser.CreateZombie("Free");
+        GetComponent<LabSceneUIController>().SetDataToUI();
     }
 
     public void OnClickCreateZombie()
     {
-        ClientData.Instance.clientUser.CreateZombie();
+        ClientData.Instance.clientUser.CreateZombie("");
+        GetComponent<LabSceneUIController>().SetDataToUI();
     }
 
     public void OnClickActiveZombie()
     {
-
     }
 }

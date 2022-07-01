@@ -9,10 +9,18 @@ public class ClientZombie
     public string ID;
     public ZombieRare zombieRare;
 
-    public ClientZombie()
+    public ClientZombie(string typeZombie)
     {
         ID = "#" + RandomGame.RandomString();
-        RandomRareZombie();
+        if(typeZombie =="")
+        {
+            RandomRareZombie();
+        }
+        else
+        {
+            zombieRare = ZombieRare.Free;
+        }
+        
     }
 
     private void RandomRareZombie()
@@ -49,6 +57,7 @@ public class ClientZombie
 
 public enum ZombieRare
 {
+    Free,
     Common ,
     Uncommon ,
     Rare ,

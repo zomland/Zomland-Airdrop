@@ -117,14 +117,31 @@ public class ClientUser
         return ;
     }
 
-    public void CreateZombie()
+    public void CreateZombie(string typeCreate)
     {
-        ClientZombie newZombie =  new ClientZombie();
+        ClientZombie newZombie =  new ClientZombie(typeCreate);
         clientZombies.Add(newZombie);
 
         ChangeAmountLabItem("Zombie",1);
-        ChangeAmountLabItem("Bottle",0);
+        if(typeCreate == "")
+        {
+            ChangeAmountLabItem("Bottle",0);
+        }
+        else
+        {
+            ChangeAmountLabItem("First Bottle",0);
+        }
+        
+        ClientGame.Instance.IDCurrentZombie = newZombie.ID;
+    }
 
+    public ClientZombie GetZombie(string ID)
+    {
+        foreach(var child in clientZombies)
+        {
+            if(child.ID == ID) return child;
+        }
+        return null;
     }
 
 
