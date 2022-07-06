@@ -8,7 +8,8 @@ public class ClientZombie
 {
     public string ID;
     public ZombieRare zombieRare;
-    public int HP;
+    public int currentHP;
+    public int maxHP;
     public int speed;
     public int stamina;
     public int attack;
@@ -25,7 +26,8 @@ public class ClientZombie
             zombieRare = ZombieRare.Free;
         }
 
-        HP = 100;
+        currentHP = 100;
+        maxHP = 100;
         speed = 12;
         stamina = 100;
         attack = 100;

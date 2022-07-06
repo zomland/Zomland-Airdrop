@@ -29,7 +29,12 @@ public class LabSceneItem : MonoBehaviour
 
     private void Choose()
     {
+        if(IDZombie != "" && IDZombie == ClientGame.Instance.IDCurrentZombie )
+        {
+            return ;
+        }
         FindObjectOfType<LabSceneUIController>().OpenPopup(labItemType);
+        FindObjectOfType<LabSceneController>().currentChoiceZombie =  IDZombie;
     }
 
     public void SetType( string name , int index)

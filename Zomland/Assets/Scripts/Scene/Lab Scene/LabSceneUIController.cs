@@ -25,7 +25,15 @@ public class LabSceneUIController : MonoBehaviour
     public GameObject ripImage;
     public GameObject zombieImage;
 
-    
+    void Start()
+    {
+        if(ClientGame.Instance.IDCurrentZombie != "")
+        {
+            ripImage.SetActive(false);
+            zombieImage.SetActive(true);
+        }
+    }
+
     public void OpenPopup(LabItemType labItemType)
     {
         if(labItemType == LabItemType.Bottle)
@@ -46,5 +54,11 @@ public class LabSceneUIController : MonoBehaviour
     {
         IDCreate.text = ClientGame.Instance.IDCurrentZombie;
         rareCreate.text = ClientData.Instance.clientUser.GetZombie(ClientGame.Instance.IDCurrentZombie).zombieRare.ToString();
+    }
+
+    public void SetDataToActivePopup()
+    {
+        IDActive.text =  ClientGame.Instance.IDCurrentZombie;
+        rareActive.text = ClientData.Instance.clientUser.GetZombie(ClientGame.Instance.IDCurrentZombie).zombieRare.ToString();
     }
 }

@@ -34,7 +34,6 @@ public class ButtonChangeScene : MonoBehaviour
 
     private void OnClickChangeScene()
     {
-        if(fromScene == toScene) return;
         ChangeSceneController.LoadScene(toScene.ToString());
     }
 }

@@ -10,8 +10,11 @@ public class LabSceneController : MonoBehaviour
     public GameObject list;
     public GameObject whereToSpawn;
 
+    public string currentChoiceZombie ;
+
     void Start()
     {
+        currentChoiceZombie = "";
         SpawnItem();
     }
 
@@ -60,5 +63,7 @@ public class LabSceneController : MonoBehaviour
 
     public void OnClickActiveZombie()
     {
+        ClientGame.Instance.IDCurrentZombie =  currentChoiceZombie;
+        GetComponent<LabSceneUIController>().SetDataToActivePopup();
     }
 }

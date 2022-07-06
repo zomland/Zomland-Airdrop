@@ -14,8 +14,15 @@ public class LabZombieImageController : MonoBehaviour
     public TextMeshProUGUI staminaText;
     public TextMeshProUGUI attackText;
 
+    ClientZombie clientZombie;
     void Start()
     {
-        
+        clientZombie = ClientData.Instance.clientUser.GetZombie(ClientGame.Instance.IDCurrentZombie);
+        ID.text =  clientZombie.ID;
+        rareZombie.text =  clientZombie.zombieRare.ToString();
+        HP.value = clientZombie.currentHP /  clientZombie.maxHP;
+        speedText.text =  clientZombie.speed.ToString();
+        staminaText.text = clientZombie.stamina.ToString();
+        attackText.text  = clientZombie.attack.ToString();
     }
 }
