@@ -13,11 +13,17 @@ public class LabSceneUIController : MonoBehaviour
 
     [Header("Create Zombie")]
     public TextMeshProUGUI IDCreate;
+    public TextMeshProUGUI rareCreate;
     public Image imageCreate;
 
     [Header("Active Zombie")]
     public TextMeshProUGUI IDActive;
+    public TextMeshProUGUI rareActive;
     public Image imageActive;
+
+    [Header("Image Lab Scene")]
+    public GameObject ripImage;
+    public GameObject zombieImage;
 
     
     public void OpenPopup(LabItemType labItemType)
@@ -36,8 +42,9 @@ public class LabSceneUIController : MonoBehaviour
         }
     }
 
-    public void SetDataToUI()
+    public void SetDataToCreatePopup()
     {
         IDCreate.text = ClientGame.Instance.IDCurrentZombie;
+        rareCreate.text = ClientData.Instance.clientUser.GetZombie(ClientGame.Instance.IDCurrentZombie).zombieRare.ToString();
     }
 }

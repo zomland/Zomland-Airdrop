@@ -8,6 +8,10 @@ public class ClientZombie
 {
     public string ID;
     public ZombieRare zombieRare;
+    public int HP;
+    public int speed;
+    public int stamina;
+    public int attack;
 
     public ClientZombie(string typeZombie)
     {
@@ -20,7 +24,11 @@ public class ClientZombie
         {
             zombieRare = ZombieRare.Free;
         }
-        
+
+        HP = 100;
+        speed = 12;
+        stamina = 100;
+        attack = 100;
     }
 
     private void RandomRareZombie()

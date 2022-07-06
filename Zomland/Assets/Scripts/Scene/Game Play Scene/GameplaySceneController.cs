@@ -13,6 +13,7 @@ public class GameplaySceneController : MonoBehaviour
     public GameObject background;
     public GameObject dontHaveZombiePopup;
     public TextMeshProUGUI ID;
+    public TextMeshProUGUI rare;
 
     [Header("Zombie")]
     public Movement zombie;
@@ -45,7 +46,9 @@ public class GameplaySceneController : MonoBehaviour
 
         ID.gameObject.SetActive(true);
         ID.text = ClientGame.Instance.IDCurrentZombie;
-        
+        rare.gameObject.SetActive(true);
+        rare.text =  ClientData.Instance.clientUser.GetZombie(ClientGame.Instance.IDCurrentZombie).zombieRare.ToString();
+
         background.GetComponent<Image>().sprite =  imageHavingZom;
         ground.SetActive(true);
         

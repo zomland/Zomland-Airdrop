@@ -49,13 +49,13 @@ public class LabSceneController : MonoBehaviour
     public void OnClickCreateFreeZombie()
     {
         ClientData.Instance.clientUser.CreateZombie("Free");
-        GetComponent<LabSceneUIController>().SetDataToUI();
+        GetComponent<LabSceneUIController>().SetDataToCreatePopup();
     }
 
     public void OnClickCreateZombie()
     {
         ClientData.Instance.clientUser.CreateZombie("");
-        GetComponent<LabSceneUIController>().SetDataToUI();
+        GetComponent<LabSceneUIController>().SetDataToCreatePopup();
     }
 
     public void OnClickActiveZombie()
