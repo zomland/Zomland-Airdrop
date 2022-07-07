@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49223f712541a54292f1355f6de504d, type: 3}
   m_Name: DefaultSprite
   m_EditorClassIdentifier: 
+  spriteBottle: {fileID: 21300000, guid: fa7490f746f7fed409de7f5c2f822f83, type: 3}
   listSpritesLab:
-  - name: First Bottle
+  - name: Free Bottle
     sprite: {fileID: 21300000, guid: fa7490f746f7fed409de7f5c2f822f83, type: 3}
   - name: Bottle
     sprite: {fileID: 21300000, guid: 06a2c81ac42594f4f920c33e3ce49ed2, type: 3}

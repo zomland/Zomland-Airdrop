@@ -23,27 +23,23 @@ public class LabSceneController : MonoBehaviour
     {
         for(int i=0;i< ClientData.Instance.clientUser.slotLabScene ;i++)
         {
-            var item = Instantiate(labSceneItemPrefab,whereToSpawn.transform.position,Quaternion.identity,list.transform);
+            Instantiate(labSceneItemPrefab,whereToSpawn.transform.position,Quaternion.identity,list.transform);
         }
 
         int index = 0;
-        foreach(var child in ClientData.Instance.clientUser.listItemLab)
-        {
-            for(int j  = 0 ; j< child.amount ;j++)
-            {
-                var item =  list.transform.GetChild(index);
-                item.transform.GetChild(0).GetComponent<Image>().sprite  = ClientData.Instance.GetSpriteLab(child.name);
-                item.GetComponent<LabSceneItem>().SetType(child.name,j);
-                index ++;
-            }
-        }
-    }
 
-    private void DestroyItem()
-    {
-        for (int i  = list.transform.childCount -1; i >= 0 ;i--)
+        var item =  list.transform.GetChild(index);
+        item.transform.GetChild(0).GetComponent<Image>().sprite  = ClientData.Instance.GetSpriteLab("Bottle");
+        item.GetComponent<LabSceneItem>().SetType("Bottle",-1);
+        index ++;
+
+        var zombies =  ClientData.Instance.clientUser.GetLabItem("Zombie");
+        for(int j  = 0 ; j< zombies.amount ;j++)
         {
-            Destroy(list.transform.GetChild(i).gameObject);
+            var tmp =  list.transform.GetChild(index);
+            tmp.transform.GetChild(0).GetComponent<Image>().sprite  = ClientData.Instance.GetSpriteLab(zombies.name);
+            tmp.GetComponent<LabSceneItem>().SetType(zombies.name,j);
+            index ++;
         }
     }
     

@@ -58,7 +58,7 @@ public class ClientUser
         foreach(var child in defaultSprites.listSpritesLab)
         {
             LabItem tmp ; 
-            if(child.name == "First Bottle")
+            if(child.name == "Free Bottle")
             {
                 tmp = new LabItem(child.name,1);
             }
@@ -117,6 +117,24 @@ public class ClientUser
         return ;
     }
 
+    public LabItem GetLabItem(string name)
+    {
+        foreach(var child in listItemLab)
+        {
+            if(child.name == name) return child;
+        }
+        return null;
+    }
+
+    public int GetAmountChestItem(string name)
+    {
+        foreach(var child in listItemChest)
+        {
+            if(child.name == name) return child.amount;
+        }
+        return 0;
+    }
+
     public void CreateZombie(string typeCreate)
     {
         ClientZombie newZombie =  new ClientZombie(typeCreate);
@@ -129,7 +147,7 @@ public class ClientUser
         }
         else
         {
-            ChangeAmountLabItem("First Bottle",0);
+            ChangeAmountLabItem("Free Bottle",0);
         }
         
         ClientGame.Instance.IDCurrentZombie = newZombie.ID;

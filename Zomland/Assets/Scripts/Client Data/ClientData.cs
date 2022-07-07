@@ -19,9 +19,9 @@ public class ClientData : Singleton<ClientData>
     {
         foreach(var child  in defaultSprites.listSpritesLab)
         {
-            if(child.name == name) return child.sprite;
+            if(child.name == name && name =="Zombie") return child.sprite;
         }
-        return null;
+        return defaultSprites.spriteBottle;
     }
 
     public Sprite GetSpriteChest(string name)

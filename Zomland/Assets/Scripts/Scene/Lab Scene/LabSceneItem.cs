@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public enum LabItemType 
 {
     None,
-    FirstBottle,
     Bottle,
     Zombie
 }
@@ -41,10 +40,6 @@ public class LabSceneItem : MonoBehaviour
     {
         switch(name)
         {
-            case "First Bottle" : 
-                labItemType = LabItemType.FirstBottle;
-                IDZombie  = "";
-                break;
             case "Bottle" :
                 labItemType = LabItemType.Bottle;
                 IDZombie  = "";

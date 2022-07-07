@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="DefaultSprite")]
 public class DefaultSprites : ScriptableObject
 {
+    public Sprite spriteBottle;
     public List<Sprites> listSpritesLab = new List<Sprites>();
     public List<Sprites> listSpriteChest = new List<Sprites>();
 }
