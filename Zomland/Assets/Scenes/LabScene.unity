@@ -4120,6 +4120,7 @@ MonoBehaviour:
   IDActive: {fileID: 1650272352}
   rareActive: {fileID: 1779136002}
   imageActive: {fileID: 1087667740}
+  IDActivePopup: {fileID: 493322245}
   ripImage: {fileID: 1532907283}
   zombieImage: {fileID: 1113291729}
 --- !u!1 &1036096241
@@ -6244,7 +6245,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1885119564}
   m_HandleRect: {fileID: 1885119563}
   m_Direction: 2
-  m_Value: 1.0000001
+  m_Value: 1
   m_Size: 0.43557572
   m_NumberOfSteps: 0
   m_OnValueChanged:

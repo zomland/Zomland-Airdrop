@@ -19,6 +19,7 @@ public class LabSceneUIController : MonoBehaviour
     public TextMeshProUGUI IDActive;
     public TextMeshProUGUI rareActive;
     public Image imageActive;
+    public TextMeshProUGUI IDActivePopup;
 
     [Header("Image Lab Scene")]
     public GameObject ripImage;
@@ -38,6 +39,7 @@ public class LabSceneUIController : MonoBehaviour
         if(labItemType== LabItemType.Zombie)
         {
             activeZombiePopup.SetActive(true);
+            IDActivePopup.text =  FindObjectOfType<LabSceneController>().currentChoiceZombie;
         }
         else
         {

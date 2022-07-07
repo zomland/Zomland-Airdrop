@@ -32,8 +32,8 @@ public class LabSceneItem : MonoBehaviour
         {
             return ;
         }
-        FindObjectOfType<LabSceneUIController>().OpenPopup(labItemType);
         FindObjectOfType<LabSceneController>().currentChoiceZombie =  IDZombie;
+        FindObjectOfType<LabSceneUIController>().OpenPopup(labItemType);
     }
 
     public void SetType( string name , int index)
