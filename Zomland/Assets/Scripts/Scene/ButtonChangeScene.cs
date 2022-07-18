@@ -13,6 +13,8 @@ public enum Scenes
     ChestScene  ,
     LabScene ,
     ConnectScene,
+    ExportScene,
+    ImportScene
 }
 public class ButtonChangeScene : MonoBehaviour
 {

@@ -8,6 +8,8 @@ public class ConnectSceneController : MonoBehaviour
 {
     public Button connectButton;
     public TextMeshProUGUI addressText;
+    public GameObject exportButton;
+    public GameObject importButton;
 
     void Start()
     {
@@ -21,6 +23,9 @@ public class ConnectSceneController : MonoBehaviour
             connectButton.gameObject.SetActive(false);
             addressText.gameObject.SetActive(true);
             DisplayAddress();
+
+            exportButton.GetComponent<TextMeshProUGUI>().color =  new Color(255,255,0);
+            importButton.GetComponent<TextMeshProUGUI>().color =  new Color(255,255,0);
         }
     }
 
@@ -36,4 +41,6 @@ public class ConnectSceneController : MonoBehaviour
     {
         addressText.text =  ClientData.Instance.clientUser.address.ToString();
     }
+
+
 }

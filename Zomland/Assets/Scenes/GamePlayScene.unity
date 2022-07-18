@@ -532,6 +532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClientData
       objectReference: {fileID: 0}
+    - target: {fileID: 8628890588740330406, guid: ddbb5caeef3f2fd4192c8024dac66ab1,
+        type: 3}
+      propertyPath: clientUser.address
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8628890588740330407, guid: ddbb5caeef3f2fd4192c8024dac66ab1,
         type: 3}
       propertyPath: m_RootOrder
