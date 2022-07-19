@@ -1,5 +1,4 @@
 using System;
-using FirebaseWebGL.Scripts.Objects;
 using System.Collections;
 using System.Collections.Generic;
 
