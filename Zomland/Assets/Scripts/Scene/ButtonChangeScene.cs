@@ -4,18 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum Scenes
-{
-    ManagerScene = 0 ,
-     LoginScene  ,
-     LoadingScene ,
-    GamePlayScene  ,
-    ChestScene  ,
-    LabScene ,
-    ConnectScene,
-    ExportScene,
-    ImportScene
-}
 public class ButtonChangeScene : MonoBehaviour
 {
     public Scenes fromScene;
@@ -38,4 +26,14 @@ public class ButtonChangeScene : MonoBehaviour
     {
         ChangeSceneController.LoadScene(toScene.ToString());
     }
+}
+public enum Scenes
+{
+    ManagerScene = 0,
+    LoginScene,
+    LoadingScene,
+    GamePlayScene,
+    ChestScene,
+    LabScene,
+    ConnectScene,
 }

@@ -15,7 +15,7 @@ public class LabSceneItem : MonoBehaviour
     public Button button;
     public string  IDZombie;     //if bottle -> "" , if zombie -> ID zombie
     public LabItemType labItemType;
-
+   // public bool _prepareActiveZombiePopup;
     void OnEnable ()
     {
         button.onClick.AddListener(Choose);
@@ -28,12 +28,19 @@ public class LabSceneItem : MonoBehaviour
 
     private void Choose()
     {
-        if(IDZombie != "" && IDZombie == ClientGame.Instance.IDCurrentZombie )
-        {
-            return ;
-        }
-        FindObjectOfType<LabSceneController>().currentChoiceZombie =  IDZombie;
-        FindObjectOfType<LabSceneUIController>().OpenPopup(labItemType);
+        /*   
+           if(IDZombie != "" && IDZombie == ClientGame.Instance.IDCurrentZombie )
+           {
+             //  ClientGame.Instance.IDCurrentZombie = IDZombie;
+               // _prepareActiveZombiePopup = true;
+               return ;
+           }
+          */
+        //   FindObjectOfType<LabSceneUIController>().OpenPopup(labItemType);
+      
+        transform.GetChild(1).gameObject.SetActive(true);
+        FindObjectOfType<LabSceneController>().currentChoiceZombie =  IDZombie;       
+        FindObjectOfType<LabSceneActiveButton>().labItemType = labItemType;
     }
 
     public void SetType( string name , int index)

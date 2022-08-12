@@ -10,7 +10,7 @@ public static class ChangeSceneController
         SceneManager.LoadScene(sceneTo);
     }
 }
-
+    
 public static class RandomGame
 {
     public static string  RandomString()

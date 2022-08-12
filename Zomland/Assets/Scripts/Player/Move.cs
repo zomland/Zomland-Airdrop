@@ -33,7 +33,8 @@ public class Move : MonoBehaviour
         if (currentSpeed <= 0) return false;
 
         float getX = Input.GetAxisRaw("Horizontal");
-        float getZ = Input.GetAxisRaw("Vertical");
+        float getZ = Input.GetAxisRaw("Vertical");  
+
 
         //Move any direction
         if (getX != 0 || getZ != 0)

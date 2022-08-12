@@ -48,7 +48,7 @@ public class ItemSpawner : MonoBehaviour
     private void Spawn()
     {
         if(!canSpawn) return;
-        if(countTime >= timeSpawnFood && spawnFood == true)
+        if(countTime >= timeSpawnFood && spawnFood == true) 
         {
             int rnd;
             if(indexFood == 2|| indexFood == 4)
