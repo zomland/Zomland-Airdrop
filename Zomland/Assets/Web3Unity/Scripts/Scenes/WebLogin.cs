@@ -32,7 +32,7 @@ public class WebLogin : MonoBehaviour
             account = ConnectAccount();
         };
 
-        FindObjectOfType<ConnectSceneController>().Connected(account);
+        GetComponent<ConnectSceneController>().Connected(account);
         SetConnectAccount("");
     }
 }
