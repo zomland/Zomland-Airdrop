@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using FirebaseWebGL.Scripts.Objects;
+
 
 [System.Serializable]
 public class ClientUser
