@@ -13,7 +13,8 @@ public class LabZombieImageController : MonoBehaviour
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI staminaText;
     public TextMeshProUGUI attackText;
-
+    [Header("Add")]
+    public TextMeshProUGUI HPtext;
     ClientZombie clientZombie;
     void Start()
     {
@@ -24,5 +25,6 @@ public class LabZombieImageController : MonoBehaviour
         speedText.text =  clientZombie.speed.ToString();
         staminaText.text = clientZombie.stamina.ToString();
         attackText.text  = clientZombie.attack.ToString();
+        HPtext.text = $"{clientZombie.currentHP}/{clientZombie.maxHP}";
     }
 }

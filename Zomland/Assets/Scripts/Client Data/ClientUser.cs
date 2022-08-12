@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using FirebaseWebGL.Scripts.Objects;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,8 +14,9 @@ public class ClientUser
     public int amountCoin;
 
     //Item
-    public List<LabItem> listItemLab ;
-    public List<ChestItem> listItemChest ;
+    public List<LabItem> listItemLab;
+    public List<ChestItem> listItemChest;  
+    
 
     //Zombie
     public List<ClientZombie> clientZombies;
@@ -76,7 +77,11 @@ public class ClientUser
             listItemChest.Add(tmp);
         }
     }
-
+    /// <summary>
+    /// thay đổi số lượng của lab
+    /// </summary>
+    /// <param name="typeLab"></param>
+    /// <param name="signal"></param>
     public void ChangeAmountLabItem(string typeLab ,  int signal)
     {
         foreach(var child in listItemLab)
@@ -96,7 +101,11 @@ public class ClientUser
         }
         return ;
     }
-
+    /// <summary>
+    /// thay đổi số lượng chest
+    /// </summary>
+    /// <param name="typechest"></param>
+    /// <param name="signal"></param>
      public void ChangeAmountChestItem(string typechest ,  int signal)
     {
         foreach(var child in listItemChest)
@@ -116,7 +125,6 @@ public class ClientUser
         }
         return ;
     }
-
     public LabItem GetLabItem(string name)
     {
         foreach(var child in listItemLab)
@@ -177,7 +185,7 @@ public class ClientUser
     {
         foreach(var child in listItemChest)
         {
-            child.amount   += 2 ;
+            child.amount   += 4 ;
         }
     }
 }

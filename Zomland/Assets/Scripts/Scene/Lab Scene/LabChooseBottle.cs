@@ -20,7 +20,8 @@ public class LabChooseBottle : MonoBehaviour
 
     void Start()
     {
-        freeBottleButton.onClick.AddListener(ChooseFreeButton);
+      //  freeBottleButton.onClick.AddListener(ChooseFreeButton);
+        freeBottleButton.onClick.AddListener(ChooseBottle);
         bottleButton.onClick.AddListener(ChooseBottle);
         amountFreeBottle.text =  ClientData.Instance.clientUser.GetLabItem("Free Bottle").amount.ToString();
         amountBottle.text = ClientData.Instance.clientUser.GetLabItem("Bottle").amount.ToString();
